@@ -8,6 +8,7 @@ const { bookRouter } = require('./routes');
 const app = express();
 const bookFile = 'book.json';
 const {loggingMdw} = require('./middleware');
+const {initializeDB}= require('./config/db-config')
 //Es para que use un middleware
 app.use(express.json());
 
@@ -38,6 +39,7 @@ const errorHandler = (err, req, res, next)=> {
 
 app.use(errorHandler);
 
-app.listen( PORT, ()=> {
+app.listen( PORT, async()=> {
+   await initializeDB()
     console.log( `Server running in ${PORT}`);
 });

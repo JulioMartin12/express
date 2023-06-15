@@ -8,13 +8,13 @@
   "name": "cluster1",
   "version": "1.0.0",
   "description": "Primer Proyecto del Cluster 1",
-  "main": "src/clase3.js",
+  "main": "src/app.js",
   "devDependencies": {
     "nodemon": "^2.0.22"
   },
   "scripts": {
-    "start": "node src/clase3.js",
-    "start:dev": "nodemon src/clase3.js",
+    "start": "node src/app.js",
+    "start:dev": "nodemon src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
