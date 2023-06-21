@@ -1,20 +1,23 @@
 // Traemos express , con esto no hacemos nada.
 const express = require('express')
 const PORT = 8090;
-const fs = require('fs')
 
-const { bookRouter } = require('./routes');
+const { bookRouter, userRouter } = require('./routes');
 //tenemos que construir la aplicación, instanciamos la aplicación
 const app = express();
 const bookFile = 'book.json';
 const {loggingMdw} = require('./middleware');
 const {initializeDB}= require('./config/db-config')
+
+
 //Es para que use un middleware
 app.use(express.json());
 
 app.use(loggingMdw);
 
-app.use('/book',bookRouter)
+app.use('/book',bookRouter);
+app.use('/user',userRouter);
+
 
 app.get('/',(req,res)=>{
     console.log("User",req.user);

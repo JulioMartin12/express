@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { bookConroller } = require('../controllers');
+const { bookController } = require('../controllers');
 
 
-router.post('/:bookId',bookConroller.createBookController);
+router.post('/:bookId',bookController.createBookController);
 
 
-   router.get('/:bookId', bookConroller.getBookController);
+   router.get('/:bookId', bookController.getBookController);
 
    router.put('/:bookId', (req, res)=>{
     console.log(`Book found with is ${req.params.bookId}`);

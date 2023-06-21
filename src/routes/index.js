@@ -1,3 +1,3 @@
 const bookRouter = require('./book');
-
-module.exports = {bookRouter};
+const userRouter = require('./user');
+module.exports = {bookRouter, userRouter};

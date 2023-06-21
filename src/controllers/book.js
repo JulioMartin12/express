@@ -13,11 +13,11 @@ const createBookController = (req,res) =>{
 
 
    const getBookController = (req, res)=>{
-    console.log(`Book found with is ${req.params.bookId}`);
+    console.log(`Userfound with is ${req.params.UserId}`);
     req.body
     res.json({id: req.params.bookId, name:"Lord of the ring"})
    };
 
 
 
-   module.exports = { createBookController, getBookController}
+   module.exports = { createBookController}
