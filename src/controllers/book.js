@@ -20,4 +20,4 @@ const createBookController = (req,res) =>{
 
 
 
-   module.exports = { createBookController}
+   module.exports = { createBookController,getBookController}

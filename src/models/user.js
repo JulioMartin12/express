@@ -1,6 +1,6 @@
 const {DataTypes}= require('sequelize');
-const { sequelize } = require('../config/db-config');
-
+const {sequelize } = require('../config/db-config');
+const Ticket = require('./ticket')
 const User = sequelize.define("Users",{
     // definimos como se llama el modelo , segundo como se representan en la BD.
 id: {
@@ -33,4 +33,6 @@ password:{
 },
 });
 
-module.exports = User;
+User.hasMany(Ticket);
+Ticket.belongsTo(User);
+module.exports = User
